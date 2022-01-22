@@ -1,0 +1,21 @@
+query get_all_starships {
+  allStarships {
+    totalCount
+    starships {
+      id
+      name
+      model
+      starshipClass
+      manufacturers
+      costInCredits
+      length
+      crew
+      passengers
+      maxAtmospheringSpeed
+      hyperdriveRating
+      MGLT
+      cargoCapacity
+      consumables
+    }
+  }
+}

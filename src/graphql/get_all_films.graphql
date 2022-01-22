@@ -1,0 +1,13 @@
+query get_all_films {
+  allFilms {
+    totalCount
+    films {
+      id
+      title
+      episodeID
+      director
+      producers
+      releaseDate
+    }
+  }
+}

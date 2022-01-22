@@ -1,0 +1,17 @@
+query get_all_people {
+  allPeople {
+    totalCount
+    people {
+      id
+      name
+      birthYear
+      eyeColor
+      eyeColor
+      gender
+      hairColor
+      height
+      mass
+      skinColor
+    }
+  }
+}

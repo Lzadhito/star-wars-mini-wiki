@@ -1,0 +1,17 @@
+query get_all_planets {
+  allPlanets {
+    totalCount
+    planets {
+      id
+      name
+      diameter
+      rotationPeriod
+      orbitalPeriod
+      gravity
+      population
+      climates
+      terrains
+      surfaceWater
+    }
+  }
+}

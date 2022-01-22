@@ -1,0 +1,17 @@
+query get_all_species {
+  allSpecies {
+    totalCount
+    species {
+      id
+      name
+      classification
+      designation
+      averageHeight
+      averageLifespan
+      eyeColors
+      hairColors
+      skinColors
+      language
+    }
+  }
+}
