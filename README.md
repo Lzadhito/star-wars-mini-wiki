@@ -5,4 +5,3 @@ Star Wars Mini Wiki is powered by [SWAPI GQL](https://swapi-graphql.netlify.app)
 ## Used Libraries
 
 - emotion: to provide css in js styling in css performance
-- themeUI: to easier development on using some of themed common components

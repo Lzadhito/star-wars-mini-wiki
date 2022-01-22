@@ -4,7 +4,6 @@ query get_all_films {
     films {
       id
       title
-      episodeID
       director
       producers
       releaseDate
