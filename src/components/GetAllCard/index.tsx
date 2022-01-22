@@ -1,5 +1,6 @@
 import { camelCaseToSentence } from "src/helpers/camelCaseToSentence";
-import { Card } from "theme-ui";
+import Card from "@/components/Card";
+import styGetAllCard from "./styles";
 
 interface Props {
   // using any because of how dynamic can be
@@ -9,7 +10,7 @@ interface Props {
 const GetAllCard = ({ data }: Props) => {
   const keys = Object.keys(data);
   return (
-    <Card sx={{ margin: "100px 0" }}>
+    <Card className={styGetAllCard}>
       {keys.map((key: string, index) => {
         if (key === "__typename" || key === "id")
           return <span key={`none-${index}`}></span>;
