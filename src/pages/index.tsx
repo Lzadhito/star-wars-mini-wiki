@@ -1,12 +1,10 @@
 import type { NextPage } from "next";
 import { css } from "@emotion/react";
-import { useQuery } from "@apollo/client";
 import GET_ALL_FILMS from "@/graphql/get_all_films.graphql";
+import client from "@/graphql/client";
 
-const Home: NextPage = () => {
-  const { data } = useQuery(GET_ALL_FILMS);
-
-  console.log(data);
+const Home: NextPage = ({ films }) => {
+  console.log(films);
 
   return (
     <div
@@ -18,5 +16,14 @@ const Home: NextPage = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const { data } = await client.query({ query: GET_ALL_FILMS });
+  return {
+    props: {
+      films: data,
+    },
+  };
+}
 
 export default Home;
