@@ -1,29 +1,21 @@
 import type { NextPage } from "next";
-import { css } from "@emotion/react";
 import GET_ALL_FILMS from "@/graphql/get_all_films.graphql";
 import client from "@/graphql/client";
+import GetAllCard from "@/components/GetAllCard";
 
-const Home: NextPage = ({ films }) => {
-  console.log(films);
-
+const Home: NextPage = ({ data }) => {
   return (
-    <div
-      css={css`
-        background-color: blue;
-      `}
-    >
-      soldier 76
+    <div>
+      {data.map((e) => (
+        <GetAllCard key={e.id} data={e} />
+      ))}
     </div>
   );
 };
 
 export async function getStaticProps() {
   const { data } = await client.query({ query: GET_ALL_FILMS });
-  return {
-    props: {
-      films: data,
-    },
-  };
+  return { props: { data: data.allFilms.films } };
 }
 
 export default Home;
