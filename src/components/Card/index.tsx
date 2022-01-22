@@ -4,11 +4,11 @@ import styCard from "./styles";
 
 interface Props {
   children: ReactNode;
-  className?: SerializedStyles;
+  css?: SerializedStyles;
 }
 
-const Card = ({ children, className }: Props) => (
-  <div css={[styCard, className]}>{children}</div>
+const Card = ({ children, css }: Props) => (
+  <div css={[styCard, css]}>{children}</div>
 );
 
 export default Card;

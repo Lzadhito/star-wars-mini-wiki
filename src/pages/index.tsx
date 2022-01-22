@@ -1,16 +1,10 @@
 import type { NextPage } from "next";
-import GET_ALL_FILMS from "@/graphql/get_all_films.graphql";
 import client from "@/graphql/client";
-import GetAllCard from "@/components/GetAllCard";
+import GetAllLayout from "@/components/GetAllLayout";
+import GET_ALL_FILMS from "@/graphql/get_all_films.graphql";
 
-const Home: NextPage = ({ data }) => {
-  return (
-    <div>
-      {data.map((e) => (
-        <GetAllCard key={e.id} data={e} />
-      ))}
-    </div>
-  );
+const Home: NextPage = ({ data }: any) => {
+  return <GetAllLayout data={data} />;
 };
 
 export async function getStaticProps() {
