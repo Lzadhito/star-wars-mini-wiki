@@ -19,7 +19,7 @@ const ConnectionSection = ({ data, dataKey, sectionMargin }: Props) => {
   return (
     <section css={styGeneratedSection(sectionMargin)}>
       <b className="connectionTitle">{childKey}</b>
-      <ul>
+      <ul className="connectionListWrapper">
         {childs.map((e) => {
           const firstPathname = ["residents", "people"].includes(childKey)
             ? "characters"
@@ -28,7 +28,7 @@ const ConnectionSection = ({ data, dataKey, sectionMargin }: Props) => {
           const desc = childKey === "films" ? e.title : e.name;
 
           return (
-            <li key={url}>
+            <li className="connectionListNode" key={url}>
               <Link href={url}>{desc}</Link>
             </li>
           );

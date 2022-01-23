@@ -14,16 +14,21 @@ const NormalSection = ({
   value,
   isBlockSections,
 }: Props) => {
-  console.log("key", dataKey);
-  console.log("value: ", value);
+  const isArrayValue = Array.isArray(value);
   return (
-    <section css={styGeneratedSection(sectionMargin, isBlockSections)}>
+    <section
+      css={styGeneratedSection(sectionMargin, isBlockSections || isArrayValue)}
+    >
       <b>
         {camelCaseToSentence(dataKey)}
         {!isBlockSections && ": "}
       </b>
-      {Array.isArray(value) ? (
-        value.map((v) => <p key={v}>{v}</p>)
+      {isArrayValue ? (
+        <ul>
+          {value.map((v) => (
+            <li key={v}>{v}</li>
+          ))}
+        </ul>
       ) : (
         <span key={value}>{value}</span>
       )}

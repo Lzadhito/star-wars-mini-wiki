@@ -7,7 +7,7 @@ export const styGeneratedSection = (
   margin: ${sectionMargin} 0;
 
   b {
-    margin: 1em 0;
+    margin: 1rem 0;
     ${isBlockSections && `display: block;`}
     text-transform: capitalize;
   }
@@ -17,12 +17,16 @@ export const styGeneratedSection = (
   }
 
   ul {
+    padding-left: 1rem;
     margin: 0;
-    margin-left: -50px;
   }
 
-  li {
+  .connectionListWrapper {
+    margin-left: -1rem;
+  }
+
+  .connectionListNode {
     float: left;
-    margin: 20px;
+    margin: 0 1rem 1rem 1rem;
   }
 `;
