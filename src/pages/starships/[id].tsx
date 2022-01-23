@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import client from "@/graphql/client";
 import GET_ALL_STARSHIPS from "@/graphql/get_all_starships.graphql";
 import GET_STARSHIP from "@/graphql/get_starship.graphql";
-import DetailLayout from "@/components/DetailLayout";
+import DetailLayout from "@/components/layouts/DetailLayout";
 
 const StarshipDetail: NextPage = ({ data }: any) => {
   return <DetailLayout data={data} titleKey="name" />;

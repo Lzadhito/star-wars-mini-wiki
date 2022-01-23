@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import client from "@/graphql/client";
 import GET_ALL_CHARACTERS from "@/graphql/get_all_characters.graphql";
 import GET_CHARACTER from "@/graphql/get_character.graphql";
-import DetailLayout from "@/components/DetailLayout";
+import DetailLayout from "@/components/layouts/DetailLayout";
 
 const CharacterDetail: NextPage = ({ data }: any) => {
   return <DetailLayout data={data} titleKey="name" />;

@@ -1,5 +1,5 @@
 import Card from "@/components/Card";
-import GeneratedSection from "../GeneratedSection";
+import GeneratedSection from "@/components/GeneratedSection";
 import { styDetailLayout } from "./styles";
 
 interface Props {

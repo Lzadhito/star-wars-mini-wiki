@@ -1,7 +1,8 @@
 import type { ReactText } from "react";
 import { useRouter } from "next/router";
+
 import Card from "@/components/Card";
-import GeneratedSection from "../GeneratedSection";
+import GeneratedSection from "@/components/GeneratedSection";
 import { styGetAllLayout } from "./styles";
 
 interface Props {

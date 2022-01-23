@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import client from "@/graphql/client";
 import GET_ALL_SPECIES from "@/graphql/get_all_species.graphql";
 import GET_SPECIES from "@/graphql/get_species.graphql";
-import DetailLayout from "@/components/DetailLayout";
+import DetailLayout from "@/components/layouts/DetailLayout";
 
 const SpeciesDetail: NextPage = ({ data }: any) => {
   return <DetailLayout data={data} titleKey="name" />;
