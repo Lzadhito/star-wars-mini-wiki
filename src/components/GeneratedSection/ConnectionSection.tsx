@@ -21,7 +21,9 @@ const ConnectionSection = ({ data, dataKey, sectionMargin }: Props) => {
       <b className="connectionTitle">{childKey}</b>
       <ul className="connectionListWrapper">
         {childs.map((e) => {
-          const firstPathname = ["residents", "people"].includes(childKey)
+          const firstPathname = ["residents", "people", "pilots"].includes(
+            childKey
+          )
             ? "characters"
             : childKey;
           const url = `/${firstPathname}/${e.id}`;
