@@ -12,6 +12,15 @@ const nextConfig = {
   webpackDevMiddleware: (config) => {
     return config;
   },
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/films",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

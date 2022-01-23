@@ -1,6 +1,5 @@
-import { camelCaseToSentence } from "@/helpers/camelCaseToSentence";
-import Link from "next/link";
-import { styGeneratedSection } from "./styles";
+import ConnectionSection from "./ConnectionSection";
+import NormalSection from "./NormalSection";
 
 interface Props {
   data: any[];
@@ -20,46 +19,23 @@ const GeneratedSection = ({
         if (excludeKeys.includes(key))
           return <span key={`none-${index}`}></span>;
         else if (key.endsWith("Connection")) {
-          const childPrefix = key.substring(0, key.indexOf("Connection"));
-          const childKey = childPrefix.endsWith("s")
-            ? childPrefix
-            : childPrefix + "s";
-          const childs = data[key][childKey];
-          const getChildId = (index: number) =>
-            data[key]["edges"][index]["node"]["id"];
-
           return (
-            <section
-              key={`${key}-${childs?.toString()}`}
-              css={styGeneratedSection(sectionMargin)}
-            >
-              <b>{camelCaseToSentence(key)}</b>
-              <ul>
-                {childs.map((e, i) => {
-                  const url = `${childPrefix}/${getChildId(i)}`;
-                  return (
-                    <li key={url}>
-                      <Link href={url}>{e.name}</Link>
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
+            <ConnectionSection
+              key={`${key}-${data[key].toString()}`}
+              data={data}
+              dataKey={key}
+              sectionMargin={sectionMargin}
+            />
           );
         } else {
           const value: any = data[key];
           return (
-            <section
+            <NormalSection
               key={`${key}-${value?.toString()}`}
-              css={styGeneratedSection(sectionMargin)}
-            >
-              <b>{camelCaseToSentence(key)}</b>
-              {Array.isArray(value) ? (
-                value.map((v) => <p key={v}>{v}</p>)
-              ) : (
-                <p key={value}>{value}</p>
-              )}
-            </section>
+              dataKey={key}
+              sectionMargin={sectionMargin}
+              value={value}
+            />
           );
         }
       })}

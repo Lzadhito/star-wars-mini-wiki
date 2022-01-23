@@ -3,7 +3,7 @@ import client from "@/graphql/client";
 import GetAllLayout from "@/components/GetAllLayout";
 import GET_ALL_FILMS from "@/graphql/get_all_films.graphql";
 
-const Home: NextPage = ({ data }: any) => {
+const AllFilms: NextPage = ({ data }: any) => {
   return <GetAllLayout data={data} />;
 };
 
@@ -12,4 +12,4 @@ export async function getStaticProps() {
   return { props: { data: data.allFilms.films } };
 }
 
-export default Home;
+export default AllFilms;
