@@ -8,6 +8,7 @@ import client from "@/graphql/client";
 import Navigation from "@/components/Navigation";
 import "@/lib/css/global.css";
 import PageLoader from "@/components/PageLoader";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false);
@@ -35,9 +36,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         <PageLoader />
       ) : (
         <>
+          <Head>
+            <title>Star Wars Mini Wiki</title>
+          </Head>
           <Navigation />
           <main>
-            {" "}
             <Component {...pageProps} />
           </main>
         </>
