@@ -5,6 +5,7 @@ export const styGeneratedSection = (
   isBlockSections = false
 ) => css`
   margin: ${sectionMargin} 0;
+  display: block;
 
   b {
     margin: 1rem 0;
@@ -28,5 +29,9 @@ export const styGeneratedSection = (
   .connectionListNode {
     float: left;
     margin: 0 1rem 1rem 1rem;
+  }
+
+  .floatClearer {
+    clear: both;
   }
 `;

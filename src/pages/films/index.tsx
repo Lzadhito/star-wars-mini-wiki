@@ -1,11 +1,16 @@
 import type { NextPage } from "next";
 import client from "@/graphql/client";
-import GetAllLayout from "@/components/GetAllLayout";
+import GetAllLayout from "@/components/layouts/GetAllLayout";
 import GET_ALL_FILMS from "@/graphql/get_all_films.graphql";
 
 const AllFilms: NextPage = ({ data, totalCount }: any) => {
   return (
-    <GetAllLayout data={data} totalCount={totalCount} primaryKey="title" />
+    <GetAllLayout
+      data={data}
+      totalCount={totalCount}
+      primaryKey="title"
+      title="Films"
+    />
   );
 };
 

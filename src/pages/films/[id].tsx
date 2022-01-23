@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import client from "@/graphql/client";
 import GET_ALL_FILMS from "@/graphql/get_all_films.graphql";
 import GET_FILM from "@/graphql/get_film.graphql";
-import DetailLayout from "@/components/DetailLayout";
+import DetailLayout from "@/components/layouts/DetailLayout";
 
 const FilmDetail: NextPage = ({ data }: any) => {
   return <DetailLayout data={data} titleKey="title" />;

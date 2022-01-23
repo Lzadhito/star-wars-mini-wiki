@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import client from "@/graphql/client";
 import GET_ALL_VEHICLES from "@/graphql/get_all_vehicles.graphql";
 import GET_VEHICLE from "@/graphql/get_vehicle.graphql";
-import DetailLayout from "@/components/DetailLayout";
+import DetailLayout from "@/components/layouts/DetailLayout";
 
 const VehicleDetail: NextPage = ({ data }: any) => {
   return <DetailLayout data={data} titleKey="name" />;

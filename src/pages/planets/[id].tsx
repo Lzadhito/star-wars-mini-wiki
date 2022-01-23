@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import client from "@/graphql/client";
 import GET_ALL_PLANETS from "@/graphql/get_all_planets.graphql";
 import GET_PLANET from "@/graphql/get_planet.graphql";
-import DetailLayout from "@/components/DetailLayout";
+import DetailLayout from "@/components/layouts/DetailLayout";
 
 const PlanetDetail: NextPage = ({ data }: any) => {
   return <DetailLayout data={data} titleKey="name" />;
