@@ -1,5 +1,6 @@
 import Card from "@/components/Card";
 import GeneratedSection from "@/components/GeneratedSection";
+import { useRouter } from "next/router";
 import { styDetailLayout } from "./styles";
 
 interface Props {
@@ -9,19 +10,29 @@ interface Props {
 }
 
 const DetailLayout = ({ data, titleKey = "name" }: Props) => {
-  const title = data[titleKey];
+  const router = useRouter();
+
+  const onClickBackBtn = () => {
+    router.back();
+  };
+
   return (
-    <Card>
-      <div css={styDetailLayout}>
-        <h1>{title}</h1>
-        <GeneratedSection
-          data={data}
-          excludeKey={titleKey}
-          sectionMargin="1rem"
-          isBlockSections
-        />
-      </div>
-    </Card>
+    <div css={styDetailLayout}>
+      <Card>
+        <button className="backBtn" onClick={onClickBackBtn}>
+          {"<"} Kembali
+        </button>
+        <div className="container">
+          <h1>{data[titleKey]}</h1>
+          <GeneratedSection
+            data={data}
+            excludeKey={titleKey}
+            sectionMargin="1rem"
+            isBlockSections
+          />
+        </div>
+      </Card>
+    </div>
   );
 };
 

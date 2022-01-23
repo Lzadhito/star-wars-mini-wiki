@@ -1,8 +1,17 @@
 import { css } from "@emotion/react";
 
 export const styGetAllLayout = (columCount: number) => css`
-  column-count: ${columCount};
-  column-gap: 1em;
+  margin: 10vh 0;
+
+  h1 {
+    text-align: center;
+  }
+
+  .masonry {
+    column-count: ${columCount};
+    column-gap: 1em;
+    margin: 0 5vw;
+  }
 
   .section {
     margin: 1rem 0;

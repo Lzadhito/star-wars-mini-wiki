@@ -5,7 +5,12 @@ import GET_ALL_FILMS from "@/graphql/get_all_films.graphql";
 
 const AllFilms: NextPage = ({ data, totalCount }: any) => {
   return (
-    <GetAllLayout data={data} totalCount={totalCount} primaryKey="title" />
+    <GetAllLayout
+      data={data}
+      totalCount={totalCount}
+      primaryKey="title"
+      title="Films"
+    />
   );
 };
 

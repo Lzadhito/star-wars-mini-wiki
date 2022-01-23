@@ -10,9 +10,10 @@ interface Props {
   data: any[];
   totalCount: number;
   primaryKey?: string;
+  title: string;
 }
 
-const GetAllLayout = ({ data, totalCount, primaryKey }: Props) => {
+const GetAllLayout = ({ data, totalCount, primaryKey, title }: Props) => {
   const router = useRouter();
 
   const onClick = (id: ReactText) => {
@@ -23,13 +24,16 @@ const GetAllLayout = ({ data, totalCount, primaryKey }: Props) => {
 
   return (
     <div css={styGetAllLayout(masonryColumn)}>
-      {data.map((e) => (
-        <div className="cardWrapper" onClick={() => onClick(e.id)} key={e.id}>
-          <Card>
-            <GeneratedSection data={e} primaryKey={primaryKey} />
-          </Card>
-        </div>
-      ))}
+      <h1>{title}</h1>
+      <div className="masonry">
+        {data.map((e) => (
+          <div className="cardWrapper" onClick={() => onClick(e.id)} key={e.id}>
+            <Card>
+              <GeneratedSection data={e} primaryKey={primaryKey} />
+            </Card>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

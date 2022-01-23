@@ -1,10 +1,12 @@
 import type { NextPage } from "next";
 import client from "@/graphql/client";
-import GetAllLayout from "@/components/GetAllLayout";
+import GetAllLayout from "@/components/layouts/GetAllLayout";
 import GET_ALL_CHARACTERS from "@/graphql/get_all_characters.graphql";
 
 const AllCharacters: NextPage = ({ data, totalCount }: any) => {
-  return <GetAllLayout data={data} totalCount={totalCount} />;
+  return (
+    <GetAllLayout data={data} totalCount={totalCount} title="Characters" />
+  );
 };
 
 export async function getStaticProps() {

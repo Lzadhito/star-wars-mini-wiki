@@ -1,4 +1,3 @@
-import type { SerializedStyles } from "@emotion/react";
 import type { ReactNode } from "react";
 import styCard from "./styles";
 
