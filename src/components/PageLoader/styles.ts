@@ -1,4 +1,3 @@
-// import black} from "@/lib/colors";
 import { css } from "@emotion/react";
 
 export const styPageLoader = css`

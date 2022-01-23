@@ -7,9 +7,14 @@ export const styNavigation = css`
   height: 50px;
   width: 100%;
   background-color: black;
-  color: white;
 
+  * {
+    color: white;
+  }
+
+  h1,
   h3 {
+    line-height: 1rem;
     margin: 0;
     padding: 0;
     cursor: pointer;
@@ -17,7 +22,6 @@ export const styNavigation = css`
 
   a {
     text-decoration: none;
-    color: white;
     font-weight: bold;
   }
 

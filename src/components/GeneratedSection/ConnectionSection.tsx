@@ -36,6 +36,7 @@ const ConnectionSection = ({ data, dataKey, sectionMargin }: Props) => {
           );
         })}
       </ul>
+      <div className="floatClearer" />
     </section>
   );
 };

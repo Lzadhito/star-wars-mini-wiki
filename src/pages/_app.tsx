@@ -9,6 +9,7 @@ import Navigation from "@/components/Navigation";
 import "@/lib/css/global.css";
 import PageLoader from "@/components/PageLoader";
 import Head from "next/head";
+import Footer from "@/components/Footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false);
@@ -32,19 +33,20 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ApolloProvider client={client}>
-      {loading ? (
-        <PageLoader />
-      ) : (
-        <>
-          <Head>
-            <title>Star Wars Mini Wiki</title>
-          </Head>
-          <Navigation />
-          <main>
+      <Head>
+        <title>Star Wars Mini Wiki</title>
+      </Head>
+      <Navigation />
+      <main>
+        {loading ? (
+          <PageLoader />
+        ) : (
+          <>
             <Component {...pageProps} />
-          </main>
-        </>
-      )}
+            <Footer />
+          </>
+        )}
+      </main>
     </ApolloProvider>
   );
 }

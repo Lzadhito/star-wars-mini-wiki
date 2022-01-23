@@ -6,7 +6,7 @@ export const styDetailLayout = css`
 
   .container {
     padding: 0 5rem;
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
   }
 
   h1 {
@@ -19,8 +19,13 @@ export const styDetailLayout = css`
 
   .backBtn {
     background: none;
-    border: none;
     cursor: pointer;
+    font-weight: bold;
+    border: none;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 1rem;
     padding: 0.5rem;
   }
 `;
