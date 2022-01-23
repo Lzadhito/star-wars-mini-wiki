@@ -8,52 +8,32 @@ query get_film($id: ID) {
     releaseDate
     speciesConnection {
       species {
+        id
         name
-      }
-      edges {
-        node {
-          id
-        }
       }
     }
     starshipConnection {
       starships {
+        id
         name
-      }
-      edges {
-        node {
-          id
-        }
       }
     }
     vehicleConnection {
       vehicles {
+        id
         name
-      }
-      edges {
-        node {
-          id
-        }
       }
     }
     characterConnection {
       characters {
+        id
         name
-      }
-      edges {
-        node {
-          id
-        }
       }
     }
     planetConnection {
       planets {
+        id
         name
-      }
-      edges {
-        node {
-          id
-        }
       }
     }
   }

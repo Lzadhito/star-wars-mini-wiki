@@ -19,32 +19,20 @@ query get_person($id: ID) {
     }
     filmConnection {
       films {
+        id
         title
-      }
-      edges {
-        node {
-          id
-        }
       }
     }
     starshipConnection {
       starships {
+        id
         name
-      }
-      edges {
-        node {
-          id
-        }
       }
     }
     vehicleConnection {
       vehicles {
+        id
         name
-      }
-      edges {
-        node {
-          id
-        }
       }
     }
   }
