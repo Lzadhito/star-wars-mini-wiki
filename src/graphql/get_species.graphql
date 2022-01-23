@@ -1,0 +1,30 @@
+query get_species($id: ID) {
+  species(id: $id) {
+    name
+    classification
+    designation
+    averageHeight
+    averageLifespan
+    eyeColors
+    hairColors
+    skinColors
+    language
+    homeworld {
+      id
+      name
+    }
+    personConnection {
+      people {
+        id
+        name
+      }
+    }
+    filmConnection {
+      films {
+        id
+        title
+      }
+    }
+    id
+  }
+}

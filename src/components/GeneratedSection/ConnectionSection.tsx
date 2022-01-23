@@ -9,7 +9,10 @@ interface Props {
 
 const ConnectionSection = ({ data, dataKey, sectionMargin }: Props) => {
   const childPrefix = dataKey.substring(0, dataKey.indexOf("Connection"));
-  const childKey = childPrefix.endsWith("s") ? childPrefix : childPrefix + "s";
+  let childKey = childPrefix;
+  if (childPrefix === "person") childKey = "people";
+  else if (!childPrefix.endsWith("s")) childKey += "s";
+
   const childs = data[dataKey][childKey];
 
   if (childs.length === 0) return <></>;
@@ -18,8 +21,9 @@ const ConnectionSection = ({ data, dataKey, sectionMargin }: Props) => {
       <b className="connectionTitle">{childKey}</b>
       <ul>
         {childs.map((e) => {
-          const firstPathname =
-            childKey === "residents" ? "characters" : childKey;
+          const firstPathname = ["residents", "people"].includes(childKey)
+            ? "characters"
+            : childKey;
           const url = `/${firstPathname}/${e.id}`;
           const desc = childKey === "films" ? e.title : e.name;
 

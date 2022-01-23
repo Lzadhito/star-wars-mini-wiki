@@ -13,17 +13,21 @@ const NormalSection = ({
   sectionMargin,
   value,
   isBlockSections,
-}: Props) => (
-  <section css={styGeneratedSection(sectionMargin, isBlockSections)}>
-    <b>
-      {camelCaseToSentence(dataKey)}
-      {!isBlockSections && ": "}
-    </b>
-    {Array.isArray(value) ? (
-      value.map((v) => <p key={v}>{v}</p>)
-    ) : (
-      <span key={value}>{value}</span>
-    )}
-  </section>
-);
+}: Props) => {
+  console.log("key", dataKey);
+  console.log("value: ", value);
+  return (
+    <section css={styGeneratedSection(sectionMargin, isBlockSections)}>
+      <b>
+        {camelCaseToSentence(dataKey)}
+        {!isBlockSections && ": "}
+      </b>
+      {Array.isArray(value) ? (
+        value.map((v) => <p key={v}>{v}</p>)
+      ) : (
+        <span key={value}>{value}</span>
+      )}
+    </section>
+  );
+};
 export default NormalSection;

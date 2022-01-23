@@ -22,10 +22,14 @@ const GeneratedSection = ({
     <>
       {Object.keys(data).map((key: string, index: number) => {
         const value: any = data[key];
-        if (excludeKeys.includes(key) || !value) {
+        if (
+          excludeKeys.includes(key) ||
+          !value ||
+          (Array.isArray(value) && value.length === 0)
+        ) {
           return <span key={`none-${index}`}></span>;
         } else if (key === primaryKey) {
-          return <h2>{value}</h2>;
+          return <h2 key={value}>{value}</h2>;
         } else if (key.endsWith("Connection")) {
           return (
             <ConnectionSection
