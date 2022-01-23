@@ -18,7 +18,9 @@ const ConnectionSection = ({ data, dataKey, sectionMargin }: Props) => {
       <b className="connectionTitle">{childKey}</b>
       <ul>
         {childs.map((e) => {
-          const url = `/${childKey}/${e.id}`;
+          const firstPathname =
+            childKey === "residents" ? "characters" : childKey;
+          const url = `/${firstPathname}/${e.id}`;
           const desc = childKey === "films" ? e.title : e.name;
 
           return (
