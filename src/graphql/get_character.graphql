@@ -1,0 +1,39 @@
+query get_person($id: ID) {
+  person(id: $id) {
+    id
+    name
+    birthYear
+    eyeColor
+    gender
+    hairColor
+    height
+    mass
+    skinColor
+    homeworld {
+      id
+      name
+    }
+    species {
+      id
+      name
+    }
+    filmConnection {
+      films {
+        id
+        title
+      }
+    }
+    starshipConnection {
+      starships {
+        id
+        name
+      }
+    }
+    vehicleConnection {
+      vehicles {
+        id
+        name
+      }
+    }
+  }
+}

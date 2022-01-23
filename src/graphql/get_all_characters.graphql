@@ -1,4 +1,4 @@
-query get_all_people {
+query get_all_characters {
   allPeople {
     totalCount
     people {

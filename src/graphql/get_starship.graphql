@@ -1,0 +1,30 @@
+query get_starships($id: ID) {
+  starship(id: $id) {
+    name
+    model
+    starshipClass
+    manufacturers
+    costInCredits
+    length
+    crew
+    passengers
+    maxAtmospheringSpeed
+    hyperdriveRating
+    MGLT
+    cargoCapacity
+    consumables
+    pilotConnection {
+      pilots {
+        id
+        name
+      }
+    }
+    filmConnection {
+      films {
+        id
+        title
+      }
+    }
+    id
+  }
+}

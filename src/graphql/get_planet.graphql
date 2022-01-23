@@ -1,0 +1,26 @@
+query get_planet($id: ID) {
+  planet(id: $id) {
+    name
+    diameter
+    rotationPeriod
+    orbitalPeriod
+    gravity
+    population
+    climates
+    terrains
+    surfaceWater
+    residentConnection {
+      residents {
+        id
+        name
+      }
+    }
+    filmConnection {
+      films {
+        id
+        title
+      }
+    }
+    id
+  }
+}
