@@ -3,7 +3,7 @@ import client from "@/graphql/client";
 import GetAllLayout from "@/components/GetAllLayout";
 import GET_ALL_STARSHIPS from "@/graphql/get_all_starships.graphql";
 
-const AllCharacters: NextPage = ({ data, totalCount }: any) => {
+const AllStarships: NextPage = ({ data, totalCount }: any) => {
   return <GetAllLayout data={data} totalCount={totalCount} />;
 };
 
@@ -17,4 +17,4 @@ export async function getStaticProps() {
   };
 }
 
-export default AllCharacters;
+export default AllStarships;

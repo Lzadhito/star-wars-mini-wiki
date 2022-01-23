@@ -4,7 +4,7 @@ import GET_ALL_STARSHIPS from "@/graphql/get_all_starships.graphql";
 import GET_STARSHIP from "@/graphql/get_starship.graphql";
 import DetailLayout from "@/components/DetailLayout";
 
-const SpeciesDetail: NextPage = ({ data }: any) => {
+const StarshipDetail: NextPage = ({ data }: any) => {
   return <DetailLayout data={data} titleKey="name" />;
 };
 
@@ -27,4 +27,4 @@ export async function getStaticProps({ params: { id } }) {
   return { props: { data: data.starship } };
 }
 
-export default SpeciesDetail;
+export default StarshipDetail;

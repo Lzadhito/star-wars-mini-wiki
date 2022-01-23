@@ -3,7 +3,7 @@ import client from "@/graphql/client";
 import GetAllLayout from "@/components/GetAllLayout";
 import GET_ALL_SPECIES from "@/graphql/get_all_species.graphql";
 
-const AllCharacters: NextPage = ({ data, totalCount }: any) => {
+const AllSpecies: NextPage = ({ data, totalCount }: any) => {
   return <GetAllLayout data={data} totalCount={totalCount} />;
 };
 
@@ -17,4 +17,4 @@ export async function getStaticProps() {
   };
 }
 
-export default AllCharacters;
+export default AllSpecies;
