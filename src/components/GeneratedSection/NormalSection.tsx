@@ -1,13 +1,28 @@
 import { camelCaseToSentence } from "@/helpers/camelCaseToSentence";
 import { styGeneratedSection } from "./styles";
 
-const NormalSection = ({ dataKey, sectionMargin, value }) => (
-  <section css={styGeneratedSection(sectionMargin)}>
-    <b>{camelCaseToSentence(dataKey)}</b>
+interface Props {
+  dataKey: string;
+  sectionMargin?: string;
+  value: string | number | string[] | number[];
+  isBlockSections?: boolean;
+}
+
+const NormalSection = ({
+  dataKey,
+  sectionMargin,
+  value,
+  isBlockSections,
+}: Props) => (
+  <section css={styGeneratedSection(sectionMargin, isBlockSections)}>
+    <b>
+      {camelCaseToSentence(dataKey)}
+      {!isBlockSections && ": "}
+    </b>
     {Array.isArray(value) ? (
       value.map((v) => <p key={v}>{v}</p>)
     ) : (
-      <p key={value}>{value}</p>
+      <span key={value}>{value}</span>
     )}
   </section>
 );

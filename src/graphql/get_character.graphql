@@ -9,9 +9,14 @@ query get_person($id: ID) {
     height
     mass
     skinColor
-    # homeworld {
-    #   id
-    # }
+    homeworld {
+      id
+      name
+    }
+    species {
+      id
+      name
+    }
     filmConnection {
       films {
         title
@@ -22,10 +27,10 @@ query get_person($id: ID) {
         }
       }
     }
-    # species {
-    #   id
-    # }
     starshipConnection {
+      starships {
+        name
+      }
       edges {
         node {
           id
@@ -33,6 +38,9 @@ query get_person($id: ID) {
       }
     }
     vehicleConnection {
+      vehicles {
+        name
+      }
       edges {
         node {
           id

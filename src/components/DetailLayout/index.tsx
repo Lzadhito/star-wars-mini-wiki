@@ -14,7 +14,12 @@ const DetailLayout = ({ data, titleKey = "name" }: Props) => {
     <Card>
       <div css={styDetailLayout}>
         <h1>{title}</h1>
-        <GeneratedSection data={data} excludeKey="title" sectionMargin="2rem" />
+        <GeneratedSection
+          data={data}
+          excludeKey={titleKey}
+          sectionMargin="1rem"
+          isBlockSections
+        />
       </div>
     </Card>
   );

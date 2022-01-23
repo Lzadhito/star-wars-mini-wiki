@@ -1,14 +1,19 @@
 import { css } from "@emotion/react";
 
-export const styGeneratedSection = (sectionMargin = "1rem") => css`
+export const styGeneratedSection = (
+  sectionMargin = "1rem",
+  isBlockSections = false
+) => css`
   margin: ${sectionMargin} 0;
 
   b {
-    display: block;
+    margin: 1em 0;
+    ${isBlockSections && `display: block;`}
+    text-transform: capitalize;
   }
 
-  b:first-letter {
-    text-transform: capitalize;
+  .connectionTitle {
+    display: block;
   }
 
   ul {

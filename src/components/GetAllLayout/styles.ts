@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 
-export const styGetAllLayout = css`
-  column-count: 3;
+export const styGetAllLayout = (columCount: number) => css`
+  column-count: ${columCount};
   column-gap: 1em;
 
   .section {

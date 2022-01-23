@@ -2,7 +2,13 @@ import { camelCaseToSentence } from "@/helpers/camelCaseToSentence";
 import Link from "next/link";
 import { styGeneratedSection } from "./styles";
 
-const ConnectionSection = ({ data, dataKey, sectionMargin }) => {
+interface Props {
+  data: any[];
+  dataKey: string;
+  sectionMargin?: string;
+}
+
+const ConnectionSection = ({ data, dataKey, sectionMargin }: Props) => {
   const childPrefix = dataKey.substring(0, dataKey.indexOf("Connection"));
   const childKey = childPrefix.endsWith("s") ? childPrefix : childPrefix + "s";
   const childs = data[dataKey][childKey];
@@ -11,13 +17,15 @@ const ConnectionSection = ({ data, dataKey, sectionMargin }) => {
 
   return (
     <section css={styGeneratedSection(sectionMargin)}>
-      <b>{childKey}</b>
+      <b className="connectionTitle">{childKey}</b>
       <ul>
         {childs.map((e, i) => {
           const url = `/${childKey}/${getChildId(i)}`;
+          const desc = childKey === "films" ? e.title : e.name;
+
           return (
             <li key={url}>
-              <Link href={url}>{e.name}</Link>
+              <Link href={url}>{desc}</Link>
             </li>
           );
         })}
