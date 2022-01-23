@@ -1,0 +1,61 @@
+query get_film($id: ID) {
+  film(id: $id) {
+    id
+    title
+    episodeID
+    openingCrawl
+    director
+    producers
+    releaseDate
+    speciesConnection {
+      species {
+        name
+      }
+      edges {
+        node {
+          id
+        }
+      }
+    }
+    starshipConnection {
+      starships {
+        name
+      }
+      edges {
+        node {
+          id
+        }
+      }
+    }
+    vehicleConnection {
+      vehicles {
+        name
+      }
+      edges {
+        node {
+          id
+        }
+      }
+    }
+    characterConnection {
+      characters {
+        name
+      }
+      edges {
+        node {
+          id
+        }
+      }
+    }
+    planetConnection {
+      planets {
+        name
+      }
+      edges {
+        node {
+          id
+        }
+      }
+    }
+  }
+}
