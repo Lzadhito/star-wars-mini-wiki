@@ -30,10 +30,10 @@ This 12 pages only use the same 2 base components, which is `<GetAllLayout />` &
 The only reason to separate it into 12 files in `pages` folder is to avoid heavy slug & enable the NextJS built-in SSG + page optimization feature. If this were created with `create-react-app`, it considerable to use only 1-2 page files & spill the if else conditioning simultaneously with the routing.
 
 ## Performance
-
-![image](https://user-images.githubusercontent.com/25606110/150704976-c70661fe-f62e-4f82-9ba1-e3c15413007e.png)
+![image](https://user-images.githubusercontent.com/25606110/150831767-c8774853-6b37-408b-9883-eaf150c78499.png)
 
 This the best part! Next JS' SSG actually works very nice on production! the CLS is scored low caused by the absence of shimmer/skeleton implmentation.
+* PS: and its PWA enabled ;)
 
 ## @/ Import
 
