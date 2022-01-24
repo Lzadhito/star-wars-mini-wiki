@@ -33,7 +33,8 @@ The only reason to separate it into 12 files in `pages` folder is to avoid heavy
 ![image](https://user-images.githubusercontent.com/25606110/150831767-c8774853-6b37-408b-9883-eaf150c78499.png)
 
 This the best part! Next JS' SSG actually works very nice on production! the CLS is scored low caused by the absence of shimmer/skeleton implmentation.
-* PS: and its PWA enabled ;)
+
+\*and its PWA enable ;)
 
 ## @/ Import
 
