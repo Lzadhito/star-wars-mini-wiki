@@ -9,11 +9,11 @@ interface Props {
   // using any because of how dynamic can be
   data: any[];
   totalCount: number;
-  primaryKey?: string;
+  titleKey?: string;
   title: string;
 }
 
-const GetAllLayout = ({ data, totalCount, primaryKey, title }: Props) => {
+const GetAllLayout = ({ data, totalCount, titleKey, title }: Props) => {
   const router = useRouter();
 
   const onClick = (id: ReactText) => {
@@ -29,7 +29,7 @@ const GetAllLayout = ({ data, totalCount, primaryKey, title }: Props) => {
         {data.map((e) => (
           <div className="cardWrapper" onClick={() => onClick(e.id)} key={e.id}>
             <Card>
-              <GeneratedSection data={e} primaryKey={primaryKey} />
+              <GeneratedSection data={e} titleKey={titleKey} />
             </Card>
           </div>
         ))}
