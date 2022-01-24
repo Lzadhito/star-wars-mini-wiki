@@ -31,7 +31,7 @@ const ConnectionSection = ({ data, dataKey, sectionMargin }: Props) => {
 
           return (
             <li className="connectionListNode" key={url}>
-              <Link href={url}>
+              <Link href={url} passHref>
                 <a data-testid={`${desc}-${url}`}>{desc}</a>
               </Link>
             </li>

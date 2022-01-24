@@ -7,7 +7,7 @@ import {
   CONNECTION_SECTION_PERSONCONNECTION,
   CONNECTION_SECTION_PILOTCONNECTION,
   CONNECTION_SECTION_SPECIESCONNECTION,
-} from "../__mocks__/connectionData.mock";
+} from "./__mocks__/connectionData.mock";
 
 describe("ConnectionSection", () => {
   it("return null given empty array value", () => {
