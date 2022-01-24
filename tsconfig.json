@@ -21,6 +21,11 @@
       "emotion": ["@emotion/react"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/components/__tests__/Navigation.test.js"
+  ],
   "exclude": ["node_modules"]
 }
