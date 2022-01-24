@@ -7,7 +7,7 @@ import { styDetailLayout } from "./styles";
 
 interface Props {
   // using any because of how dynamic can be
-  data: any[];
+  data?: any[];
   titleKey: string;
 }
 
