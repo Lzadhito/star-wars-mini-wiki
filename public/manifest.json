@@ -3,8 +3,8 @@
   "short_name": "swmw",
   "theme_color": "#000",
   "background_color": "#fff",
-  "display": "browser",
-  "orientation": "standalone",
+  "display": "standalone",
+  "orientation": "portrait",
   "scope": "/",
   "start_url": "/films",
   "icons": [
