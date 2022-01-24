@@ -12,7 +12,7 @@
 - any UI library: It was planned to use ThemeUI (actually it was installed on first commit), but the website UI is too minimalist to use UI library.
 - lodash or any util libraries: even though there is some utilities that might be useful but lodash is too fat for this simple projects.
 
-> The reason to not including this wonderful libraries is to only boost preformance (even though the score on this is quite low). The developer saw the opportunity to implement Next JS' SSG as a comparison to another Next JS projects which not using SSG.
+> The reason to not including this wonderful libraries is to only boost preformance (even though the score on this is quite ~~low~~ check performance section below). The developer saw the opportunity to implement Next JS' SSG as a comparison to another Next JS projects which not using SSG.
 
 ## Pages
 
