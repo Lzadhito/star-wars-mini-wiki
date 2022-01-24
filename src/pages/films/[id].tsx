@@ -16,7 +16,7 @@ export async function getStaticPaths() {
       id: film.id,
     },
   }));
-  return { paths, fallback: "blocking" };
+  return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params: { id } }) {

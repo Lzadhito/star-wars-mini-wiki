@@ -1,5 +1,6 @@
 import Card from "@/components/Card";
 import GeneratedSection from "@/components/GeneratedSection";
+import PageLoader from "@/components/PageLoader";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { styDetailLayout } from "./styles";
@@ -16,6 +17,8 @@ const DetailLayout = ({ data, titleKey = "name" }: Props) => {
   const onClickBackBtn = () => {
     router.back();
   };
+
+  if (!data) return <PageLoader />;
 
   return (
     <div css={styDetailLayout}>

@@ -16,7 +16,7 @@ export async function getStaticPaths() {
       id: person.id,
     },
   }));
-  return { paths, fallback: "blocking" };
+  return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params: { id } }) {
