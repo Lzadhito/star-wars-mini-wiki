@@ -42,8 +42,9 @@ Don't be confused by `@/` import because it just webpack mapping to `<rootDir>/s
 ## GQL Error Handling
 
 ~~This is the second best part and the laziest part XD. Next JS' SSG gives the built in `fallback: 'blocking'` feature to block the HTML before the static fetching complete. It is kinda "turn off" the hydration best practices, but in small project with multiple pages like this we can implement error handling frugally XD~~. 
+
 It will show the loading spinner given empty data (may caused by failed query, abnormal data, etc.)
 
 ## Unit Tests
 
-will be added after office hours ;)
+![image](https://user-images.githubusercontent.com/25606110/150819717-1bb75623-ed49-43eb-b1b2-2d1123b08075.png)
