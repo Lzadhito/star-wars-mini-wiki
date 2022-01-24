@@ -17,6 +17,13 @@ export const styGetAllLayout = (columCount: number) => css`
     margin: 1rem 0;
   }
 
+  button {
+    background: none;
+    border: none;
+    font-size: inherit;
+    text-align: inherit;
+  }
+
   .cardWrapper {
     cursor: pointer;
     display: inline-block;

@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import GeneratedSection from "../";
+import GeneratedSection from "..";
 import {
   GENERATED_SECTION_EMPTY_ARRAY,
   GENERATED_SECTION_EXCLUDE,

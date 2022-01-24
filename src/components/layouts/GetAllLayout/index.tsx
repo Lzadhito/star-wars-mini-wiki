@@ -25,13 +25,18 @@ const GetAllLayout = ({ data, totalCount, titleKey, title }: Props) => {
   return (
     <div css={styGetAllLayout(masonryColumn)}>
       <h1>{title}</h1>
-      <div className="masonry">
+      <div data-testid={`masonry-${masonryColumn}`} className="masonry">
         {data.map((e) => (
-          <div className="cardWrapper" onClick={() => onClick(e.id)} key={e.id}>
+          <button
+            type="button"
+            className="cardWrapper"
+            onClick={() => onClick(e.id)}
+            key={e.id}
+          >
             <Card>
               <GeneratedSection data={e} titleKey={titleKey} />
             </Card>
-          </div>
+          </button>
         ))}
       </div>
     </div>
