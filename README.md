@@ -35,10 +35,15 @@ The only reason to separate it into 12 files in `pages` folder is to avoid heavy
 
 This the best part! Next JS' SSG actually works very nice on production! the CLS is scored low caused by the absence of shimmer/skeleton implmentation.
 
-## GQL Error Handling
-
-This is the second best part ~~and the laziest part XD~~. Next JS' SSG gives the built in `fallback: 'blocking'` feature to block the HTML before the static fetching complete. It is kinda "turn off" the hydration best practices, but in small project with multiple pages like this we can implement error handling frugally XD
-
 ## @/ Import
 
 Don't be confused by `@/` import because it just webpack mapping to `<rootDir>/src` to shorten import
+
+## GQL Error Handling
+
+~~This is the second best part and the laziest part XD. Next JS' SSG gives the built in `fallback: 'blocking'` feature to block the HTML before the static fetching complete. It is kinda "turn off" the hydration best practices, but in small project with multiple pages like this we can implement error handling frugally XD~~. 
+It will show the loading spinner given empty data (may caused by failed query, abnormal data, etc.)
+
+## Unit Tests
+
+will be added after office hours ;)
