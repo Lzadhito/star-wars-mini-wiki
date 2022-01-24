@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import ConnectionSection from "./ConnectionSection";
 import NormalSection from "./NormalSection";
 import PersonalizedSection from "./PersonalizedSection";
@@ -6,7 +7,7 @@ interface Props {
   data: any[];
   sectionMargin?: string;
   excludeKey?: string;
-  primaryKey?: string;
+  titleKey?: string;
   isBlockSections?: boolean;
 }
 
@@ -14,7 +15,7 @@ const GeneratedSection = ({
   data,
   excludeKey,
   sectionMargin,
-  primaryKey = "name",
+  titleKey = "name",
   isBlockSections,
 }: Props) => {
   const excludeKeys = ["__typename", "id", excludeKey];
@@ -27,9 +28,13 @@ const GeneratedSection = ({
           !value ||
           (Array.isArray(value) && value.length === 0)
         ) {
-          return <span key={`none-${index}`}></span>;
-        } else if (key === primaryKey) {
-          return <h2 key={value}>{value}</h2>;
+          return <Fragment key={`none-${index}`}></Fragment>;
+        } else if (key === titleKey) {
+          return (
+            <h2 data-testid={`h2-${value}`} key={value}>
+              {value}
+            </h2>
+          );
         } else if (key.endsWith("Connection")) {
           return (
             <ConnectionSection
@@ -46,7 +51,6 @@ const GeneratedSection = ({
               dataKey={key}
               sectionMargin={sectionMargin}
               value={value}
-              isBlockSections={isBlockSections}
             />
           );
         } else {

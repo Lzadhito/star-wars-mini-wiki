@@ -7,7 +7,7 @@ import { styDetailLayout } from "./styles";
 
 interface Props {
   // using any because of how dynamic can be
-  data: any[];
+  data?: any[];
   titleKey: string;
 }
 
@@ -25,7 +25,7 @@ const DetailLayout = ({ data, titleKey = "name" }: Props) => {
       <Card>
         <button className="backBtn" onClick={onClickBackBtn}>
           <Image src="/icons/back.svg" width={20} height={20} alt="back-icon" />{" "}
-          Kembali
+          Back
         </button>
         <div className="container">
           <h1>{data[titleKey]}</h1>

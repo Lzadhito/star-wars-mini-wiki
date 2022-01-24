@@ -26,11 +26,15 @@ const NormalSection = ({
       {isArrayValue ? (
         <ul>
           {value.map((v) => (
-            <li key={v}>{v}</li>
+            <li data-testid={`li-${v}`} key={v}>
+              {v}
+            </li>
           ))}
         </ul>
       ) : (
-        <span key={value}>{value}</span>
+        <span data-testid={`span-${value}`} key={value}>
+          {value}
+        </span>
       )}
     </section>
   );

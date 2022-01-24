@@ -8,7 +8,7 @@ const AllFilms: NextPage = ({ data, totalCount }: any) => {
     <GetAllLayout
       data={data}
       totalCount={totalCount}
-      primaryKey="title"
+      titleKey="title"
       title="Films"
     />
   );

@@ -45,6 +45,7 @@ export const styNavigation = css`
   }
 
   .navTabContainer {
+    overflow-y: hidden;
     overflow-x: scroll;
     /* Hide scrollbar for IE, Edge and Firefox */
     -ms-overflow-style: none; /* IE and Edge */
