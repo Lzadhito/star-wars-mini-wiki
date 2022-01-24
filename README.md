@@ -30,9 +30,13 @@ This 12 pages only use the same 2 base components, which is `<GetAllLayout />` &
 The only reason to separate it into 12 files in `pages` folder is to avoid heavy slug & enable the NextJS built-in SSG + page optimization feature. If this were created with `create-react-app`, it considerable to use only 1-2 page files & spill the if else conditioning simultaneously with the routing.
 
 ## Performance
+
 ![image](https://user-images.githubusercontent.com/25606110/150704976-c70661fe-f62e-4f82-9ba1-e3c15413007e.png)
 
 This the best part! Next JS' SSG actually works very nice on production! the CLS is scored low caused by the absence of shimmer/skeleton implmentation.
 
 ## GQL Error Handling
-This is the second best part ~~and the laziest part XD~~. Next JS' SSG gives the built in `fallback: 'blocking'` feature to block the HTML before the static fetching complete. It is kinda "turn off" the hydration best practices, but in small project with multiple pages like this we can implement error handling frugally XD
+
+~~This is the second best part and the laziest part XD. Next JS' SSG gives the built in `fallback: 'blocking'` feature to block the HTML before the static fetching complete. It is kinda "turn off" the hydration best practices, but in small project with multiple pages like this we can implement error handling frugally XD~~. 
+
+It will show the loading spinner given empty data (may caused by failed query, abnormal data, etc.)
