@@ -6,25 +6,18 @@ interface Props {
   dataKey: string;
   sectionMargin?: string;
   value: { name: string; id: string };
-  isBlockSections?: boolean;
 }
 
-const PersonalizedSection = ({
-  dataKey,
-  sectionMargin,
-  value,
-  isBlockSections,
-}: Props) => {
+const PersonalizedSection = ({ dataKey, sectionMargin, value }: Props) => {
   const { id, name } = value;
   const urlPrefix = dataKey === "homeworld" ? "planets" : dataKey;
   const url = `/${urlPrefix}/${id}`;
   return (
-    <section css={styGeneratedSection(sectionMargin, isBlockSections)}>
-      <b>
-        {camelCaseToSentence(dataKey)}
-        {!isBlockSections && ": "}
-      </b>
-      <Link href={url}>{name}</Link>
+    <section css={styGeneratedSection(sectionMargin, true)}>
+      <b>{camelCaseToSentence(dataKey)}</b>
+      <Link href={url} passHref>
+        <a data-testid={`${name}-${url}`}>{name}</a>
+      </Link>
     </section>
   );
 };

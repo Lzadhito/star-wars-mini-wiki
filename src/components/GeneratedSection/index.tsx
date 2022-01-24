@@ -46,7 +46,6 @@ const GeneratedSection = ({
               dataKey={key}
               sectionMargin={sectionMargin}
               value={value}
-              isBlockSections={isBlockSections}
             />
           );
         } else {
